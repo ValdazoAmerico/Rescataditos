@@ -1,0 +1,374 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Flamenco&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    background: #eee;
+    height: auto;
+}
+
+
+
+.ul{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-around
+    
+}
+.ul a{
+    text-decoration: none;
+}
+header li a{
+    color: sienna;
+}
+
+header li a:hover{
+    transition: all 1s ease;
+    color: steelblue;
+    border-bottom: 1px solid sienna;
+}
+
+h1{
+    font-weight:  400;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0
+}
+
+h2{
+    font-weight: 400;
+    font-size: 1.2rem;
+    text-transform: capitalize;
+    margin: 0;
+    margin-top: 20px;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+main {
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 30px 0px 40px rgba(0,0,0,0.1),
+    -30px 0px 40px rgba(0,0,0,0.1);
+}
+#landing{
+    background: #fff;
+}
+#landing-text{
+    display: flex;
+    flex: 0 1 40vw;
+    height: 45vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+#landing-text h2{
+    color: #888;
+}
+
+.carousel img{
+    height: 48vh;
+    object-fit: cover;
+}
+
+.mySlides{
+    transition: opacity 0.5s ease;
+}
+.btn{
+    padding: 0.5rem 2rem;
+    border: 1px #ccc solid;
+    display: inline-block;
+    margin: 2rem 0 0;
+    border-radius: 50px;
+    text-decoration: none;
+    color: #333;
+    transition: background 500ms ease;
+}
+
+.btn:hover{
+    background: #f4f4f4;
+}
+
+#header {
+    padding: 1.5rem;
+    text-align: center;
+    background: #333;
+    color: #fff;
+}
+
+#header h2{
+    border-left: dotted 1px #fff;
+    border-right: dotted 1px #fff;
+    display: inline-block;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.caption{
+    padding: 0.8rem;
+    text-align: center;
+}
+
+
+.linea{
+    border: 1px solid black;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 293px));
+  justify-content: center;
+  grid-gap: 28px;
+  
+  padding-bottom: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+.post {
+  
+  position: relative;
+  display: block;
+  height: 300px;
+}
+.post:hover .post-image img{
+    transition: all 0.7s;
+    width: 0;
+    
+}
+
+.post-image {
+  height: 100%;
+  margin: 0;
+}
+.post-image img {
+  width: 100%;
+  vertical-align: top;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.post-overlay {
+  background: rgba(0,0,0, .4);
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+
+  
+
+}
+
+.post:hover .post-overlay {
+  
+  display: flex;
+  
+ 
+}
+
+.caracteristicas {
+  width: 80px;
+  margin: 5px;
+  font-weight: lighter;
+  text-align: center;
+  display: inline-block;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid black;
+    border-bottom-width: 5px;
+    
+}
+
+.info h2 {
+    font-size: 3rem;
+    color: #333;
+    font-weight: bold;
+}
+
+
+form {
+
+    margin: 0 auto;
+    width: 400px;
+
+    padding: 1em;
+    border-radius: 1em;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  form li + li {
+    margin-top: 1em;
+  }
+  
+  label {
+    /* Tamaño y alineación uniforme */
+    display: inline-block;
+    width: 90px;
+    text-align: right;
+  }
+
+
+  
+input, 
+textarea {
+  font: 1em sans-serif;
+  width: 300px;
+  box-sizing: border-box;
+}
+
+input:focus, 
+textarea:focus {
+ 
+  border-color: #000;
+}
+
+textarea {
+  /* Alinear los campos de texto multilínea con sus etiquetas */
+  vertical-align: top;
+
+  /* Proporcionar espacio para escribir texto */
+  height: 5em;
+}
+
+.button {
+  /* Alinear los botones con los campos de texto */
+  padding-left: 90px; /* mismo tamaño que los elementos de la etiqueta */
+}
+
+button {
+  /* Este margen adicional representa aproximadamente el mismo espacio que el espacio
+     entre las etiquetas y sus campos de texto */
+  margin-left: .5em;
+}
+.donaciones {
+    border-bottom: 5px solid black;
+}
+.donaciones h2{
+    font-size: 3rem;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+.donaciones p{
+    text-align: center;
+    margin-top: -3px;
+    font-size: small;
+}
+
+footer{
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    color: #333;
+}
+
+footer h3{
+    font-size: 2rem;
+    margin: 0;
+}
+
+footer p{
+    font-size: 1rem;
+    margin: 5px;
+}
+footer a{
+    font-size: 2rem;
+    
+}
+.fa-facebook-official{
+    color: blue;   
+}
+
+.footer2{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-top: 30px;
+    background: seashell;
+    padding-top: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family: 'Flamenco';
+}
+
+.footer2 h4{
+    text-align: center;
+    margin: 0;
+    font-size: 1.2rem;
+}
+.footer2 p{
+    margin: 0;
+    margin-top: 2px;
+    font-size: 1rem;
+}
+.footer2 a{
+    text-decoration: none;
+    color: black;
+}
+.footer2 span{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 768px) {
+  .post-list {
+    grid-gap: 3px;
+    display: grid;
+    /* grid-template-columns: 100%; */
+}
+
+
+
+
+/*Pantallas mayores a los 500 pixeles */
+
+@media(min-width: 500px){
+    #landing{
+        display: flex;
+    }
+    #landing-text{
+        height: 100vh;
+    }
+    #landing-image{
+        height: 100vh;
+    }
+}
+
+@media(min-width: 700px){
+    .btn{
+        padding: 1rem 3rem
+    }
+}
+
