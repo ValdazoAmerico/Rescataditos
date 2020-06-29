@@ -61,20 +61,28 @@ main {
 }
 #landing{
     background: #fff;
+    display: flex;
+    flex-direction: column;
 }
 #landing-text{
     display: flex;
-    flex: 0 1 40vw;
+  
     height: 45vh;
     justify-content: center;
     align-items: center;
     text-align: center;
     padding-right: 1rem;
     padding-left: 1rem;
+   
+}
+#landing-text h1{
+    color: white;
 }
 
 #landing-text h2{
-    color: #888;
+    color: white;
+    
+    
 }
 
 .carousel img{
@@ -82,9 +90,7 @@ main {
     object-fit: cover;
 }
 
-.mySlides{
-    transition: opacity 0.5s ease;
-}
+
 .btn{
     padding: 0.5rem 2rem;
     border: 1px #ccc solid;
@@ -107,13 +113,7 @@ main {
     color: #fff;
 }
 
-#header h2{
-    border-left: dotted 1px #fff;
-    border-right: dotted 1px #fff;
-    display: inline-block;
-    padding-right: 1rem;
-    padding-left: 1rem;
-}
+
 
 .caption{
     padding: 0.8rem;
@@ -348,7 +348,10 @@ footer a{
     display: grid;
     /* grid-template-columns: 100%; */
 }
-
+#landing{
+    flex-direction: row;
+}
+}
 
 
 
@@ -359,10 +362,10 @@ footer a{
         display: flex;
     }
     #landing-text{
-        height: 100vh;
+        height: 45vh;
     }
-    #landing-image{
-        height: 100vh;
+    #carousel{
+        height: 45vh;
     }
 }
 
@@ -372,3 +375,17 @@ footer a{
     }
 }
 
+
+span{
+ opacity: 0;
+ transition: all 1s ease
+}
+
+span.fade{
+    opacity: 1;
+    color: black;    
+}
+
+span.fade2{
+    opacity: 1;
+    color: steelblue}
