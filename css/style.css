@@ -373,6 +373,33 @@ footer a{
 #landing{
     flex-direction: row;
 }
+#landing-text{
+    width: 50%;
+    border: none;
+    
+}
+.carousel{
+    width: 50%;
+}
+
+#landing-text-inner h1, h2, span{
+    font-size: small;
+}
+footer h3{
+    font-size: small;
+}
+footer a{
+    font-size: 1rem;
+}
+.footer2 h4, p{
+    font-size: small;
+}
+.footer2{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 }
 
 
@@ -384,17 +411,19 @@ footer a{
         display: flex;
     }
     #landing-text{
-        height: 44vh;
-        border-bottom: 2px solid black;
-    }
-    #carousel{
         height: 45vh;
+        border-bottom: none;
+        
     }
+    
 }
 
-@media(min-width: 700px){
+@media(min-width: 768px){
     .btn{
         padding: 1rem 3rem
+    }
+    #landing-text{
+        border-bottom: 1px solid black;
     }
 }
 
