@@ -18,121 +18,121 @@ $(document).ready(function(){
     });
 });
 
-var slideIndex = 0;
-carousel();
+// var slideIndex = 0;
+// carousel();
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-
-
-
-const text = document.querySelector('#animation')
-const strText = text.textContent
-const splitText = strText.split("")
-text.textContent = ""
-
-for (let i = 0; i < splitText.length; i++){
-  text.innerHTML +=  "<span>" + splitText[i] + "</span>";
-}
-
-let char = 0
-let timer = setInterval(onTick, 50)
-
-function onTick(){
-  const span = text.querySelectorAll('span')[char]
-  span.classList.add('fade')
-  char++
-  if(char == splitText.length){
-    complete()
-    return
-  }
-}
-
-function complete(){
-  clearInterval(timer)
-  timer = null
-}
+// function carousel() {
+//   var i;
+//   var x = document.getElementsByClassName("mySlides");
+//   for (i = 0; i < x.length; i++) {
+//     x[i].style.display = "none";
+//   }
+//   slideIndex++;
+//   if (slideIndex > x.length) {slideIndex = 1}
+//   x[slideIndex-1].style.display = "block";
+//   setTimeout(carousel, 2000); // Change image every 2 seconds
+// }
 
 
-setTimeout(function() {
-  const text = document.querySelector('#animation2')
+
+// const text = document.querySelector('#animation')
+// const strText = text.textContent
+// const splitText = strText.split("")
+// text.textContent = ""
+
+// for (let i = 0; i < splitText.length; i++){
+//   text.innerHTML +=  "<span>" + splitText[i] + "</span>";
+// }
+
+// let char = 0
+// let timer = setInterval(onTick, 50)
+
+// function onTick(){
+//   const span = text.querySelectorAll('span')[char]
+//   span.classList.add('fade')
+//   char++
+//   if(char == splitText.length){
+//     complete()
+//     return
+//   }
+// }
+
+// function complete(){
+//   clearInterval(timer)
+//   timer = null
+// }
+
+
+// setTimeout(function() {
+//   const text = document.querySelector('#animation2')
   
-const strText = text.textContent
-const splitText = strText.split("")
+// const strText = text.textContent
+// const splitText = strText.split("")
 
 
 
 
-text.textContent = ""
+// text.textContent = ""
 
-for (let i = 0; i < splitText.length; i++){
-  text.innerHTML +=  "<span>" + splitText[i] + "</span>";
-}
+// for (let i = 0; i < splitText.length; i++){
+//   text.innerHTML +=  "<span>" + splitText[i] + "</span>";
+// }
 
-let char = 0
-let timer = setInterval(onTick, 50)
+// let char = 0
+// let timer = setInterval(onTick, 50)
 
-function onTick(){
-  const span = text.querySelectorAll('span')[char]
-  span.classList.add('fade2')
-  char++
-  if(char == splitText.length){
-    complete()
-    return
-  }
-}
+// function onTick(){
+//   const span = text.querySelectorAll('span')[char]
+//   span.classList.add('fade2')
+//   char++
+//   if(char == splitText.length){
+//     complete()
+//     return
+//   }
+// }
 
-function complete(){
-  clearInterval(timer)
-  timer = null
-}
-
-
-
-
-},500)
+// function complete(){
+//   clearInterval(timer)
+//   timer = null
+// }
 
 
 
 
-setTimeout(function() {
-  const text = document.querySelector('#animation3')
-const strText = text.textContent
-const splitText = strText.split("")
-text.textContent = ""
-
-for (let i = 0; i < splitText.length; i++){
-  text.innerHTML +=  "<span>" + splitText[i] + "</span>";
-}
-
-let char = 0
-let timer = setInterval(onTick, 50)
-
-function onTick(){
-  const span = text.querySelectorAll('span')[char]
-  span.classList.add('fade3')
-  char++
-  if(char == splitText.length){
-    complete()
-    return
-  }
-}
-
-function complete(){
-  clearInterval(timer)
-  timer = null
-}
+// },500)
 
 
 
 
-},4000)
+// setTimeout(function() {
+//   const text = document.querySelector('#animation3')
+// const strText = text.textContent
+// const splitText = strText.split("")
+// text.textContent = ""
+
+// for (let i = 0; i < splitText.length; i++){
+//   text.innerHTML +=  "<span>" + splitText[i] + "</span>";
+// }
+
+// let char = 0
+// let timer = setInterval(onTick, 50)
+
+// function onTick(){
+//   const span = text.querySelectorAll('span')[char]
+//   span.classList.add('fade3')
+//   char++
+//   if(char == splitText.length){
+//     complete()
+//     return
+//   }
+// }
+
+// function complete(){
+//   clearInterval(timer)
+//   timer = null
+// }
+
+
+
+
+// },4000)
