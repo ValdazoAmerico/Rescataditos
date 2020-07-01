@@ -35,8 +35,8 @@ header li a{
 
 header li a:hover{
     transition: all 1s ease;
-    color: steelblue;
-    border-bottom: 1px solid sienna;
+    color: #4682b4;
+    border-bottom: 1px solid #a0522d;
 }
 
 
@@ -408,7 +408,7 @@ footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 21.2vh;
+    margin-top: 15vh;
     
 }
 
