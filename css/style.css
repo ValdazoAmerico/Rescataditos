@@ -18,7 +18,7 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
     
 }
 .ul a{
@@ -26,6 +26,7 @@ body{
 }
 header{
     border-bottom: 1px solid black;
+    
 }
 header li a{
     color: sienna;
@@ -41,9 +42,11 @@ header li a:hover{
 
 .logo{
     
-    width: 60px;
+    width: 20px;
+   
     
-    color: lightblue;
+    
+    
     
 
 }
@@ -310,23 +313,29 @@ button {
     font-size: small;
 }
 
-footer{
+.donaciones form{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.footer{
     text-align: center;
     padding: 0;
     margin: 0;
     color: #333;
 }
 
-footer h3{
+.footer h3{
     font-size: 2rem;
     margin: 0;
 }
 
-footer p{
+.footer p{
     font-size: 1rem;
     margin: 5px;
 }
-footer a{
+.footer a{
     font-size: 2rem;
     
 }
@@ -334,7 +343,7 @@ footer a{
     color: blue;   
 }
 
-.footer2{
+footer{
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -346,21 +355,21 @@ footer a{
     font-family: 'Flamenco';
 }
 
-.footer2 h4{
+footer h4{
     text-align: center;
     margin: 0;
     font-size: 1.2rem;
 }
-.footer2 p{
+footer p{
     margin: 0;
     margin-top: 2px;
     font-size: 1rem;
 }
-.footer2 a{
+footer a{
     text-decoration: none;
     color: black;
 }
-.footer2 span{
+footer span{
     font-weight: bold;
 }
 
@@ -385,31 +394,29 @@ footer a{
 #landing-text-inner h1, h2, span{
     font-size: small;
 }
-footer h3{
+.footer h3{
     font-size: small;
 }
-footer a{
+.footer a{
     font-size: 1rem;
 }
-.footer2 h4, p{
+footer h4, p{
     font-size: small;
 }
-.footer2{
+footer{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 25%;
+    margin-top: 21.2vh;
+    
 }
 
 header li a {
     font-size: 0.6rem;
 
 }
-.post-list a{
-    /* height: 50%; */
+ 
 }
-
-
 
 /*Pantallas mayores a los 500 pixeles */
 
