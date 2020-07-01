@@ -26,13 +26,19 @@
             </ul>
         </header>
         <div id="landing">
+            
             <div id="landing-text">
+                
                 <div id="landing-text-inner">
+
+                 
+
                     <h1 id="animation">RESCATADITOS</h1>
-                    <h2 id="animation2">rescatamos animalitos para encontrarles un hogar y darlos en adopción.</h2>
+                    <h2 id="animation2">rescatamos animalitos para encontrarles un hogar y darlos en adopción. </h2>
                     <a href="mascotas.html" class="btn" id="animation3">Ver Mascotas</a>
                 </div>
             </div>
+            
             
             <div class="carousel">
             <img class="mySlides" src="img/3.jpg">
@@ -70,7 +76,7 @@
                 <p> <a href="mailto:valdazoamerico@gmail.com" style="text-decoration: none;">valdazoamerico@gmail.com</a></p>
             </div>
         
-
+            
 
     </div>
     
@@ -78,11 +84,148 @@
     src="http://code.jquery.com/jquery-3.5.1.min.js"
     integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
     crossorigin="anonymous"></script>           
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous">
     </script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       
     
+
+
+
+    <!-- main JS -->
+    <script>
+        
+$(document).ready(function(){
+    $('.post-list').magnificPopup({
+        type: 'image',
+        delegate: 'a',
+        gallery: {
+            enabled : true
+        }
+    });
+});
+
+var slideIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+
+
+
+const text = document.querySelector('#animation')
+const strText = text.textContent
+const splitText = strText.split("")
+text.textContent = ""
+
+for (let i = 0; i < splitText.length; i++){
+  text.innerHTML +=  "<span>" + splitText[i] + "</span>";
+}
+
+let char = 0
+let timer = setInterval(onTick, 50)
+
+function onTick(){
+  const span = text.querySelectorAll('span')[char]
+  span.classList.add('fade')
+  char++
+  if(char == splitText.length){
+    complete()
+    return
+  }
+}
+
+function complete(){
+  clearInterval(timer)
+  timer = null
+}
+
+
+setTimeout(function() {
+  const text = document.querySelector('#animation2')
+  
+const strText = text.textContent
+const splitText = strText.split("")
+
+
+
+
+text.textContent = ""
+
+for (let i = 0; i < splitText.length; i++){
+  text.innerHTML +=  "<span>" + splitText[i] + "</span>";
+}
+
+let char = 0
+let timer = setInterval(onTick, 50)
+
+function onTick(){
+  const span = text.querySelectorAll('span')[char]
+  span.classList.add('fade2')
+  char++
+  if(char == splitText.length){
+    complete()
+    return
+  }
+}
+
+function complete(){
+  clearInterval(timer)
+  timer = null
+}
+
+
+
+
+},500)
+
+
+
+
+setTimeout(function() {
+  const text = document.querySelector('#animation3')
+const strText = text.textContent
+const splitText = strText.split("")
+text.textContent = ""
+
+for (let i = 0; i < splitText.length; i++){
+  text.innerHTML +=  "<span>" + splitText[i] + "</span>";
+}
+
+let char = 0
+let timer = setInterval(onTick, 50)
+
+function onTick(){
+  const span = text.querySelectorAll('span')[char]
+  span.classList.add('fade3')
+  char++
+  if(char == splitText.length){
+    complete()
+    return
+  }
+}
+
+function complete(){
+  clearInterval(timer)
+  timer = null
+}
+
+
+
+
+},4000)
+    </script>
+
+
 </body>
 </html>
