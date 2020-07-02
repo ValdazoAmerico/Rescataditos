@@ -429,6 +429,9 @@ footer{
     margin-top: 15vh;
     
 }
+footer p{
+    margin: 0;
+}
 
 header li a {
     font-size: 0.6rem;
