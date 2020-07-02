@@ -20,7 +20,147 @@
     p{
         text-align: center;
     }
-</style>                                                                                                           </title>
+</style>  
+  
+<style>
+  body{
+      margin: 0;
+      padding: 0;
+      
+      font-family: 'Roboto Condensed', sans-serif;
+  }
+  .container{
+      position: relative;
+      /* width: 1200px; */
+      /* height: 900px; */
+      margin:80px auto 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+      
+  }
+  .container .box{
+      position: relative;
+      /* width: calc(400px - 30px);
+      height: calc(300px - 30px); */
+      width: 30%;
+      /* height: 30%; */
+      background: #000;
+      float:left;
+      margin: 15px;
+      box-sizing: border-box;
+      overflow: hidden;
+      box-shadow: 0 5px 10px rgba(0,0,0,.8)
+      }
+      .container .box:before{
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          right: 10px;
+          bottom: 10px;
+          border-top: 1px solid #fff;
+          border-bottom: 1px solid #fff;
+          box-sizing: border-box;
+          transition: 0.5s;
+          transform: scaleX(0);
+          opacity: 0;
+          z-index: 1;
+      }
+      .container .box:hover:before{
+          transform: scaleX(1);
+          opacity: 1;}
+
+
+
+
+          .container .box:after{
+          content: '';
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          right: 10px;
+          bottom: 10px;
+          border-left: 1px solid #fff;
+          border-right: 1px solid #fff;
+          box-sizing: border-box;
+          transition: 0.5s;
+          transform: scaleY(0);
+          opacity: 0;
+          z-index: 1;
+      }
+      .container .box:hover:after{
+          transform: scaleY(1);
+          opacity: 1;
+      }
+      .container .box .imageBox{
+          position: relative;
+          height: 100%;
+      }
+      .container .box .imageBox img{
+          height: 100%;
+          width: 100%;
+          transition: 0.5s;
+          object-fit: cover;
+      }
+      .container .box:hover .imageBox img{
+          opacity: .2;
+          transform: scale(1.2);
+      } 
+      .container .box .content {
+          position: absolute;
+          width: 100%;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 2;
+          padding: 20px;
+          box-sizing: border-box;
+      }
+      .container .box .content h2{
+          margin: 0 0 10px;
+          padding: 0;
+          color: white;
+          transition: 0.5s;
+          text-align: center;
+          transform: translateY(-50px);
+          opacity: 0;
+          visibility: hidden;
+          font-size:1rem;
+          font-weight: normal;
+      }
+      .container .box .content p{
+          margin: 0;
+          padding: 0;
+          color: white;
+          transition: 0.5s;
+          text-align: center;
+          transform: translateY(50px);
+          opacity: 0;
+          visibility: hidden;
+          font-size: smaller;
+      }
+
+      .container .box:hover .content h2,
+      .container .box:hover .content p{
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(0px);
+          transition-delay: 0.2s;
+      }
+
+      @media screen and (max-width: 768px) {
+        .container .box .content h2{
+          font-size: 0.8rem;
+        }
+        .container .box .content p{
+          font-size: 0.6rem;
+        }
+
+      }
+</style>
+
+
 </head>
 <body>
     
@@ -36,107 +176,135 @@
         </header>
         <h2>Mascotas</h2>
         <p>Pasá el mouse por encima de la imagen para más información.</p>
-        <section id="images" class="post-list">
-            <a href="img/1.jpg" id="post1" class="post" target="_blank">
-              <figure class="post-image">
-                <img src="img/1.jpg" alt="">
-              </figure>
-              <div class="post-overlay">
-                <p>
-                 Nombre: Felix<br><br>
-                Edad: 3 meses<br><br>
-            Zona: Caballito</p>
+       
+        <div class="container">
+
+
+          
+          <div class="box">
+            <div class="imageBox">
+                <img src="img/fbb6.jpg" alt="">
             </div>
-            </a>
-            <a href="img/2.jpg" id="post2" class="post" target="_blank">
-              <figure class="post-image">
-                <img src="img/2.jpg" alt="">
-              </figure>
-              <div class="post-overlay">
-                <p>
-                 Nombre: Felix<br><br>
-                Edad: 3 meses<br><br>
-            Zona: Caballito</p>
+            <a href="img/fb6.jpg"><div class="content">
+                <h2>Terry</h2>
+                <p>Terry espera por esa familia que tanto sueña, el fue Rescatado de zona sur, en muy mal estado, fue castrado y tratado y hoy esta en perfectas condiciones.
+
+                  Buddy fue adoptado, prometieron que era una adopción de por vida, pero lo devolvieron, como quien devuelve una remera.</p>
+            </div></a>
+        </div>  
+
+
+          <div class="box">
+              <div class="imageBox">
+                  <img src="img/fb3.jpg" alt="">
+              </div>
+              <a href="img/fb3.jpg" target="_blank"><div class="content">
+                  <h2>Simón</h2>
+                  <p>Simón es hermanito de Polito, el ya contó su historia y saben que? Polito tiene una mega familia 🧡🙌 así que es hora de que sus hermanitos se presenten.
+                    
+                    Mi nombre es Simon soy un pequeñito muy mimoso😍 mi hermano mayor consiguió una hermosa familia y la verdad que yo quiero lo mismo🧡.</p>
+              </div></a>
+          </div> 
+
+          
+          <div class="box">
+              <div class="imageBox">
+                  <img src="img/fb4.jpg" alt="">
+              </div>
+              <a href="img/fb4.jpg" target="_blank"> <div class="content">
+                  <h2>Polito</h2>
+                  <p>Hace un tiempo yo estaba junto a mi mamá y hermanitos en una casa con gente que no se ocupaba de nosotros, ella siempre estaba flaquita 🥺 por suerte nosotros tomábamos su leche pero llego un momento que nuestras pancitas empezaron a rugir del hambre, buscábamos comida, pero no había nada 😣</p>
+              </div></a>
+          </div>  
+          
+          <div class="box">
+            <div class="imageBox">
+                <img src="img/fb9.jpg" alt="">
             </div>
-            </a>
-            <a href="img/3.jpg" id="post3" class="post" target="_blank">
-              <figure class="post-image">
-                <img src="img/3.jpg" alt="">
-              </figure>
-              <div class="post-overlay">
+           <a href="img/fb9.jpg"><div class="content">
+                <h2>Lyly y Cala</h2>
                 <p>
-                 Nombre: Felix<br><br>
-                Edad: 3 meses<br><br>
-            Zona: Caballito</p>
+                  Enamórate de estas dos bellezas 🐱 🤩.
+                  .
+                  Mis dos florcitas buscan familia para siempre.
+                  
+                  Son muy mimosas, fueron criadas a 🍼 fueron encontradas dentro de una caja en un parque pero por suerte eso ya es pasado.
+                  Duermen en mi cama, ronronean, saltan al rascador, corren y se aman🧡
+                  Mi sueño es que sigan ese lazo especial que tienen para siempre, ambas son hembritas. .</p>
+            </div></a> 
+        </div>  
+         
+  
+          
+  
+          <div class="box">
+              <div class="imageBox">
+                  <img src="img/fb2.jpg" alt="">
+              </div>
+              <a href="img/fb2.jpg"><div class="content">
+                  <h2>Ragnar</h2>
+                  <p>Mi nombre es Ragnar, me pusieron así porque a pesar de ser chiquitito, yo me anime a salir de la cajita de donde nos dejaron abandonados, recuerdan la historia que contó mi hermanito Polito? Bueno, yo soy su hermanito menor, el rebelde🥰</p>
+              </div></a>
+          </div>  
+  
+         
+  
+          <div class="box">
+              <div class="imageBox">
+                  <img src="img/fb7.jpg" alt="">
+              </div>
+             <a href="img/fb7.jpg"><div class="content">
+                  <h2>Tokio</h2>
+                  <p>Tokio en adopción 💜
+
+                    Este machito hermoso busca familia que lo ame para toda su vida.
+                    
+                    Esta castrado y ama al humano 😍
+                    Si te enamoraste de él y tu hogar cuenta con redes de protección en todas las aberturas escribinos.</p>
+              </div></a> 
+          </div>  
+
+          <div class="box">
+            <div class="imageBox">
+                <img src="img/fbbb1.jpg" alt="">
             </div>
-            </a>
-            <a href="img/4.jpg" id="post4" class="post" target="_blank">
-              <figure class="post-image">
-                <img src="img/4.jpg" alt="">
-              </figure>
-              <div class="post-overlay">
-                <p>
-                 Nombre: Felix<br><br>
-                Edad: 3 meses<br><br>
-            Zona: Caballito</p>
+            <a href="img/fbb1.jpg"><div class="content">
+                <h2>Otto</h2>
+                <p>Tiene 6 meses y es un bombón 😍. Se salvó del peor destino, porque su familia lo abandonó junto a Ema 😭. Ahora merece una familia donde lo amen para siempre! ❤️.</p>
+            </div></a>
+        </div>  
+  
+          <div class="box">
+              <div class="imageBox">
+                  <img src="img/fb8.jpg" alt="">
+              </div>
+             <a href="img/fb8.jpg"><div class="content">
+                  <h2>Jade</h2>
+                <p>Esta pequeñita se me cruzó en mi camino, salgo del trabajo y escucho a lo lejos un maullido, empiezo a buscar y la veo a ella en la vereda, pidiendo ayuda a todo aquel que pasará por su lado, claro... Todos la esquivaban o decían pobrecita, pero seguían su camino.
+                  •
+                  Me acerque, la empece a acariciar y note en su mirada algo especial, le dije no te preocupes, que de acá nos vamos las dos.</p>
+              </div></a> 
+          </div>  
+  
+          
+
+
+          <div class="box">
+            <div class="imageBox">
+                <img src="img/fbb5.jpg" alt="">
             </div>
-            </a>
-            <a href="img/5.jpg" id="post5" class="post" target="_blank">
-              <figure class="post-image">
-                <img src="img/5.jpg" alt="">
-              </figure>
-              <div class="post-overlay">
-                <p>
-                 Nombre: Felix<br><br>
-                Edad: 3 meses<br><br>
-            Zona: Caballito</p>
-            </div>
-            </a>
-            <a href="img/6.jpg" id="post6" class="post" target="_blank">
-              <figure class="post-image">
-                <img src="img/6.jpg" alt="">
-              </figure>
-              <div class="post-overlay">
-                <p>
-                 Nombre: Felix<br><br>
-                Edad: 3 meses<br><br>
-            Zona: Caballito</p>
-            </div>
-              <a href="img/1.jpg" id="post7" class="post" target="_blank">
-                <figure class="post-image">
-                  <img src="img/1.jpg" alt="">
-                </figure>
-                <div class="post-overlay">
-                    <p>
-                     Nombre: Felix<br><br>
-                    Edad: 3 meses<br><br>
-                Zona: Caballito</p>
-                </div>
-              </a>
-              <a href="img/2.jpg" id="post8" class="post" target="_blank">
-                <figure class="post-image">
-                  <img src="img/2.jpg" alt="">
-                </figure>
-                <div class="post-overlay">
-                    <p>
-                     Nombre: Felix<br><br>
-                    Edad: 3 meses<br><br>
-                Zona: Caballito</p>
-                </div>
-              </a>
-              <a href="img/3.jpg" id="post9" class="post" target="_blank">
-                <figure class="post-image">
-                  <img src="img/3.jpg" alt="">
-                </figure>
-                <div class="post-overlay">
-                    <p>
-                     Nombre: Felix<br><br>
-                    Edad: 3 meses<br><br>
-                Zona: Caballito</p>
-                </div>
-              </a>
-            
-          </section>
+            <a href="img/fb5.jpg"><div class="content">
+                <h2>Buddy</h2>
+                <p>Buddy espera por esa familia que tanto sueña, el fue Rescatado de zona sur, en muy mal estado, fue castrado y tratado y hoy esta en perfectas condiciones.
+
+                  Buddy fue adoptado, prometieron que era una adopción de por vida, pero lo devolvieron, como quien devuelve una remera.</p>
+            </div></a>
+        </div>  
+
+      </div>
+
+
+
           </main>
 
 
@@ -150,7 +318,7 @@
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
       <script>
         $(document).ready(function(){
-    $('.post-list').magnificPopup({
+    $('.container').magnificPopup({
         type: 'image',
         delegate: 'a',
         gallery: {
