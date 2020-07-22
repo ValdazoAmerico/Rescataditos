@@ -3,22 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha256-PZLhE6wwMbg4AB3d35ZdBF9HD/dI/y4RazA3iRDurss=" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" integrity="sha256-PZLhE6wwMbg4AB3d35ZdBF9HD/dI/y4RazA3iRDurss=" crossorigin="anonymous" />
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Rescataditos</title>        
 <style>
     h2{
         text-align: center;
+        font-family: Poppins;
         color: #333;
         font-size: 3rem;
-        font-weight: bold;
         margin-bottom: 10px;
     }
     p{
         text-align: center;
+        font-family: Poppins;
     }
 </style>  
   
@@ -26,9 +28,37 @@
   body{
       margin: 0;
       padding: 0;
-      
+      background-color: rgba(188, 143, 143, 0.541);
       font-family: 'Roboto Condensed', sans-serif;
   }
+
+  /* TOOGLE BUTTON */
+  .toggle-btn {
+    position: absolute;
+    margin: 1.4em;
+    padding: 1em;
+    width: 40px;
+    height: 12px;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+    top: 0;
+}
+span.one {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: indianred;
+    opacity: 1;
+}
+span.two {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: indianred;
+    margin-top: 12px;
+    opacity: 1;
+}
   .container{
       position: relative;
       /* width: 1200px; */
@@ -51,7 +81,9 @@
       margin: 15px;
       box-sizing: border-box;
       overflow: hidden;
-      box-shadow: 0 5px 10px rgba(0,0,0,.8)
+      box-shadow: 0 5px 10px rgba(0,0,0,.8);
+      border-radius: 5px;
+
       }
       .container .box:before{
           content: '';
@@ -167,6 +199,70 @@
           font-size: 0.3rem;
         }
       }
+
+      /* menu  */
+      .menu {
+    z-index: 0;
+    position: absolute;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    top: -100%;
+}
+.data{
+    padding: 8em 0 0 2em;
+}
+.data ul li a{
+    transition: all 0.5s;
+}
+
+.data ul li a:hover{
+    font-size: 58px;
+    color: darkgoldenrod;
+}
+ul {
+    list-style: none;
+}
+li:first-child{
+    color:grey;
+    font-family: Poppins;
+    font-size: 24px;
+}
+li:not(:first-child){
+    color: #fff;
+    font-size: 42px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Poppins;
+}
+/* FOOTER  */
+footer{
+    position: fixed;
+    top: 92%;
+    background-color: rgba(245, 255, 250);
+    height: 8%;
+}
+.footer_new{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    
+}
+.footer_new h4{
+    margin: 0;
+    text-align: center;
+}
+.footer_new p{
+    margin: 0;
+    text-align: center;
+    
+    
+}
+.noshow{
+    display: none;
+}
 </style>
 
 
@@ -175,22 +271,20 @@
     
 
     <main>
-        <header>
-            <ul class="ul">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="mascotas.html">Mascotas</a></li>
-                <li><a href="info.html">Quiénes somos</a></li>
-                <li><a href="donaciones.html">Donaciones</a></li>
-            </ul>
-        </header>
-        <h2>Mascotas</h2>
-        <p>Pasá el mouse por encima de la imagen para más información.</p>
+        <div class="toggle-btn">
+            <span class="one"></span>
+            <span class="two"></span>
+        </div>
+        <h2 style="margin-bottom: 0;">Mascotas</h2>
+        <p style="margin: 0">Pasá el mouse por encima de la imagen para más información.</p>
        
+
+        
         <div class="container">
 
 
           
-          <div class="box">
+          <div class="it box">
             <div class="imageBox">
                 <img src="img/fbb6.jpg" alt="">
             </div>
@@ -203,7 +297,7 @@
         </div>  
 
 
-          <div class="box">
+          <div class="it box">
               <div class="imageBox">
                   <img src="img/fb3.jpg" alt="">
               </div>
@@ -216,7 +310,7 @@
           </div> 
 
           
-          <div class="box">
+          <div class="it box">
               <div class="imageBox">
                   <img src="img/fb4.jpg" alt="">
               </div>
@@ -226,7 +320,7 @@
               </div></a>
           </div>  
           
-          <div class="box">
+          <div class="it box">
             <div class="imageBox">
                 <img src="img/fb9.jpg" alt="">
             </div>
@@ -246,7 +340,7 @@
   
           
   
-          <div class="box">
+          <div class="it box">
               <div class="imageBox">
                   <img src="img/fb2.jpg" alt="">
               </div>
@@ -258,7 +352,7 @@
   
          
   
-          <div class="box">
+          <div class="it box">
               <div class="imageBox">
                   <img src="img/fb7.jpg" alt="">
               </div>
@@ -273,7 +367,7 @@
               </div></a> 
           </div>  
 
-          <div class="box">
+          <div class="it box">
             <div class="imageBox">
                 <img src="img/fbbb1.jpg" alt="">
             </div>
@@ -283,7 +377,7 @@
             </div></a>
         </div>  
   
-          <div class="box">
+          <div class="it box">
               <div class="imageBox">
                   <img src="img/fb8.jpg" alt="">
               </div>
@@ -298,7 +392,7 @@
           
 
 
-          <div class="box">
+          <div class="it box">
             <div class="imageBox">
                 <img src="img/fbb5.jpg" alt="">
             </div>
@@ -315,13 +409,52 @@
 
 
           </main>
+          <!-- FOOTEr  -->
+          <footer>
+            <div>
+              <div class="footer_new">
+        
+                <div>
+                  <h4  style="color:cadetblue;font-family: Poppins;">Américo Valdazo Design</h4>
+                  <p style="font-family: 'Poppins';font-size: smaller;">we are experts in creating your <i style="font-weight: 700;">dreams</i>.</p>
+                </div>
+                
+                <div>
+                  <h4 style="color:rgba(95, 158, 160, 0.77);font-family: Poppins;">Contact</h4>
+                  
+                  <p style="font-size: smaller;margin-right: 20px">
+                    <i></i> <a href="mailto:valdazoamerico@gmail.com" style="color: #000;text-decoration: none;">valdazoamerico@gmail.com</a></p>
+                  
+                </div>
+              </div>
+            
+              <!-- <div style="
+              float: right;font-size: smaller;">
+                <div>
+                  <p>© 2020 Copyright
+                  </p>
+                </div> -->
+              </div>
+          </footer>
+          <!-- MENU -->
+    <div class="menu">
+        <div class="data">
+            <ul>
+                <li>Navigation</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="mascotas.html">Mascotas</a></li>
+                <li><a href="info.html">Quiénes somos</a></li>
+                <li><a href="donaciones.html">Donaciones</a></li>
+            </ul>
+        </div>
+    </div>
 
 
           <script
     src="https://code.jquery.com/jquery-2.2.4.min.js"
     integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
     crossorigin="anonymous"></script>        
-    <script src="main.js"></script>
+  
     <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" integrity="sha256-P93G0oq6PBPWTP1IR8Mz/0jHHUpaWL0aBJTKauisG7Q=" crossorigin="anonymous">
     </script>
       <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -336,4 +469,51 @@
     });
 });
       </script>
+
+
+<!-- JS TOGGLE MENU -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js" integrity="sha512-O+atZ/gABlcFlpIoLQR04f72qHqZWKwTVsQZHqk/8VE2nrzDlnqhXbnXP7Gh/TyhpPT8tEUm5A580GG8AloHTA==" crossorigin="anonymous"></script>
+<script>
+    var t1 = new TimelineMax({paused: true})
+
+    t1.to(".one", 0.8,{
+        y: 6,
+        rotation: 45,
+        ease: Expo.eaInOut
+    });
+    t1.to(".two", 0.8,{
+        y: -6,
+        rotation: -45,
+        ease: Expo.eaInOut,
+        delay: -0.8
+    });
+
+    t1.to(".menu",1,{
+        top: '0%',
+        ease: Expo.eaInOut
+        
+    });
+    
+    t1.staggerFrom(".menu ul li", 1, {x: -200, opacity: 0, ease: Expo.easeInOut}, 0.3);
+
+    t1.reverse();
+    $(document).on("click", ".toggle-btn", function(){
+        t1.reversed(!t1.reversed());
+        const data = document.querySelector('.data ul li')
+        
+        
+        if (data.style.opacity == 0){
+            setTimeout(function(){
+                let container = document.querySelector('.container')
+                 container.classList.add('noshow')
+            },1500)
+            
+        }else{
+            let container = document.querySelector('.container')
+            container.classList.remove('noshow')
+        }
+    })
+
+    
+</script>
           </body>
