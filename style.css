@@ -1,0 +1,238 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+body {
+    background: url('desert.jpg') no-repeat 50% 50% ;
+    background-size: cover;
+    
+    
+}
+img{
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 48px;
+    opacity: 0;
+    transition: opacity 3s ease;
+    animation: boom 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes boom{
+    0%{
+        width: 60%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+.opacity{
+    opacity: 1;
+}
+h2{
+    position: absolute;
+    top: 46%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    font-size: 30px;
+    
+
+}
+
+
+h3{
+    position: absolute;
+    top: 66%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0;
+    font-family: "Poppins";
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10%;
+    padding: 1rem;
+    transition: 0.5s ease-out;
+    cursor: pointer;
+    background: linear-gradient(to right, dodgerblue 50%, indianred 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all .5s ease-out;
+   
+}
+h3:hover .fade2 {
+    color: black;
+    
+}
+h3:hover {
+    /* border: 1px solid white;
+    background: white */
+    background-position: left bottom;
+    color: black;
+}
+.toggle-btn {
+    position: fixed;
+    margin: 1.4em;
+    padding: 1em;
+    width: 40px;
+    height: 12px;
+    right: 0;
+    z-index: 1;
+    cursor: pointer;
+}
+
+.menu {
+    z-index: 0;
+    position: absolute;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    top: -100%;
+}
+.data{
+    padding: 8em 0 0 2em;
+}
+.data ul li a{
+    transition: all 0.5s;
+}
+
+.data ul li a:hover{
+    font-size: 58px;
+    color: darkgoldenrod;
+}
+ul {
+    list-style: none;
+}
+li:first-child{
+    color:grey;
+    font-family: Poppins;
+    font-size: 24px;
+}
+li:not(:first-child){
+    color: #fff;
+    font-size: 42px;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+    font-family: Poppins;
+}
+
+span{
+    opacity: 0;
+    transition: all 1s ease;
+    color: black;
+}
+span.fade1{
+    opacity: 1;
+    color: indianred;
+    text-shadow: 1px 1px 1px black, 2px 2px 2px black, 3px 3px 3px black;
+    
+}
+span.fade2{
+    opacity: 1;
+    color: black;
+    background: transparent;
+    
+}
+
+span.one {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: indianred;
+    opacity: 1;
+}
+span.two {
+    position: absolute;
+    width: 40px;
+    height: 2px;
+    background: indianred;
+    margin-top: 12px;
+    opacity: 1;
+}
+/* //PRELOAD  */
+.lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid indianred;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
+  .centrado {
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      width: 100vw;
+      z-index: 9999;
+      background-color: black;
+  }
+  .hidden{
+      overflow: hidden;
+  }
+
+
+/* //FOOTER */
+
+/* footer{
+    position: absolute;
+    top: 90%;
+} */
+
+
+footer{
+    position: fixed;
+    top: 92%;
+    background-color: rgba(245, 255, 250, 0.9);
+    height: 8%;
+}
+.footer_new{
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    
+}
+h4{
+    margin: 0;
+    text-align: center;
+}
+#animation3 span {
+    color: white;
+}
