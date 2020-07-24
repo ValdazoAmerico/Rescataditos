@@ -263,6 +263,9 @@ footer{
 .noshow{
     display: none;
 }
+.show{
+    display: block;
+}
 </style>
 
 
@@ -278,13 +281,17 @@ footer{
         <h2 style="margin-bottom: 0;">Mascotas</h2>
         <p style="margin: 0">Pasá el mouse por encima de la imagen para más información.</p>
        
-
+        <select id="select" style="position: absolute;right: 50%;transform: translateX(50%);" onchange="ver()">
+            <option>Todos</option>
+            <option>Gatitos</option>
+            <option>Perritos</option>
+        </select>
         
         <div class="container">
 
 
           
-          <div class="it box">
+          <div class="it box p">
             <div class="imageBox">
                 <img src="img/fbb6.jpg" alt="">
             </div>
@@ -297,7 +304,7 @@ footer{
         </div>  
 
 
-          <div class="it box">
+          <div class="it box g">
               <div class="imageBox">
                   <img src="img/fb3.jpg" alt="">
               </div>
@@ -310,7 +317,7 @@ footer{
           </div> 
 
           
-          <div class="it box">
+          <div class="it box g">
               <div class="imageBox">
                   <img src="img/fb4.jpg" alt="">
               </div>
@@ -320,7 +327,7 @@ footer{
               </div></a>
           </div>  
           
-          <div class="it box">
+          <div class="it box g">
             <div class="imageBox">
                 <img src="img/fb9.jpg" alt="">
             </div>
@@ -340,7 +347,7 @@ footer{
   
           
   
-          <div class="it box">
+          <div class="it box g">
               <div class="imageBox">
                   <img src="img/fb2.jpg" alt="">
               </div>
@@ -352,7 +359,7 @@ footer{
   
          
   
-          <div class="it box">
+          <div class="it box g">
               <div class="imageBox">
                   <img src="img/fb7.jpg" alt="">
               </div>
@@ -367,7 +374,7 @@ footer{
               </div></a> 
           </div>  
 
-          <div class="it box">
+          <div class="it box g">
             <div class="imageBox">
                 <img src="img/fbbb1.jpg" alt="">
             </div>
@@ -377,7 +384,7 @@ footer{
             </div></a>
         </div>  
   
-          <div class="it box">
+          <div class="it box g">
               <div class="imageBox">
                   <img src="img/fb8.jpg" alt="">
               </div>
@@ -392,7 +399,7 @@ footer{
           
 
 
-          <div class="it box">
+          <div class="it box p">
             <div class="imageBox">
                 <img src="img/fbb5.jpg" alt="">
             </div>
@@ -516,4 +523,45 @@ footer{
 
     
 </script>
+
+<!-- SELECTION TAG -->
+<script>
+var select = document.getElementById('select')
+var gatos = document.getElementsByClassName('g')
+var perros = document.getElementsByClassName('p')
+
+var ver = function(){
+    if (select.selectedIndex == '1'){
+        for (var i = 0; i < perros.length;i++){
+            perros[i].classList.add('noshow')
+            perros[i].classList.remove('show')
+        }
+        for(var i = 0; i < gatos.length;i++){
+            gatos[i].classList.add('show')
+            gatos[i].classList.remove('noshow')
+        }
+    }else if (select.selectedIndex == '2'){
+        for (var i = 0; i < gatos.length;i++){
+            gatos[i].classList.remove('show')
+            gatos[i].classList.add('noshow')
+        }
+        for (var i = 0; i < perros.length;i++){
+            perros[i].classList.add('show')
+            perros[i].classList.remove('noshow')
+        }
+    }else{
+        for (var i = 0; i < gatos.length;i++){
+            gatos[i].classList.remove('show')
+            gatos[i].classList.remove('noshow')
+        }
+        for (var i = 0; i < perros.length;i++){
+            perros[i].classList.remove('show')
+            perros[i].classList.remove('noshow')
+        }
+    }
+    
+    
+}   
+</script>
+
           </body>
