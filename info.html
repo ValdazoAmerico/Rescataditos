@@ -127,17 +127,34 @@ text-align: center;
 margin-top: -3px;
 font-family: Poppins;
 }
+
+.main p::before{
+  content: attr(data-num);
+  font-size: 2.6rem;
+  line-height: 3rem;
+  height: 3rem;
+  width: 3rem;
+  text-align: center;
+  margin-right: 1rem;
+  display: inline-block;
+  transform: rotate(-20deg);
+  background-color: #666;
+  border-radius: 50%;
+}
+.main p:nth-child(odd)::before{
+  transform: rotate(20deg);
+}
   </style>                                                                                                               </title>
 </head>
 <body>
     
-    <main>
+    <main class="main">
         <div class="toggle-btn">
             <span class="one"></span>
             <span class="two"></span>
         </div>
         <h2>Sobre Nosotros</h2>
-        <p>Nuestra institución fue creada para socorrer a animales accidentados o enfermos de la vía pública, prestarles atención veterinaria, para luego de su recuperación ser dados en adopción. Así mismo lo hacemos con animales rescatados por maltrato de propiedades privadas, luego de la denuncia pertinente,intervención policial y judicial.<br><br>La empatía nos genera un profundo sentimiento que nos lleva a hacer todo lo necesario para ayudar a estos pobres indefensos, quienes no tienen la posibilidad de pedir ayuda, sin política pública es muy difícil nuestra tarea ,aún así damos lo mejor, y logramos ,en muchos casos,lo imposible.<br><br>Llevamos el ejemplo en nuestro accionar,trabajamos muy duro para concientizar y mostrar que con respeto la realidad de miles de animales puede cambiar.<br>Como lo dice nuestra frase: *Rescatar a un animal del dolor, más que un acto de amor, es un acto de justicia.*</p>
+        <p data-num="1">Nuestra institución fue creada para socorrer a animales accidentados o enfermos de la vía pública, prestarles atención veterinaria, para luego de su recuperación ser dados en adopción. Así mismo lo hacemos con animales rescatados por maltrato de propiedades privadas, luego de la denuncia pertinente,intervención policial y judicial.</p><p data-num="2">La empatía nos genera un profundo sentimiento que nos lleva a hacer todo lo necesario para ayudar a estos pobres indefensos, quienes no tienen la posibilidad de pedir ayuda, sin política pública es muy difícil nuestra tarea ,aún así damos lo mejor, y logramos ,en muchos casos,lo imposible.</p><p data-num="3">Llevamos el ejemplo en nuestro accionar,trabajamos muy duro para concientizar y mostrar que con respeto la realidad de miles de animales puede cambiar.</p><p data-num="4">Como lo dice nuestra frase: *Rescatar a un animal del dolor, más que un acto de amor, es un acto de justicia.*</p>
 </main>
 <!-- FOOTER -->
 
